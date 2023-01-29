@@ -12,7 +12,6 @@ import java.util.*;
 @NoArgsConstructor
 public class HTaskCustom implements Serializable {
     private int number;
-
     private String id;
     private String title;
     private String state;
@@ -47,6 +46,4 @@ public class HTaskCustom implements Serializable {
     private String descriptionAr;
     private String descriptionEn;
     private List<String> activeActions;
-
-
 }
