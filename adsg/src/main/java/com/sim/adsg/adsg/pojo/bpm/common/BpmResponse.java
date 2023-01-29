@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BpmResponse<T>  implements Serializable {
+public class BpmResponse  implements Serializable {
 
     boolean status;
     String message;

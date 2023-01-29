@@ -40,6 +40,19 @@ public class BPMConsumers {
 
     }
 
+    public BpmResponse queryTasks(TokenInfo tokenInfo){
+        String serviceUrl = "queryTasks";
+        BpmResponse service = null;
+        try {
+            service = (BpmResponse) restCaller.callRestService(BASE_URL + serviceUrl, HttpMethod.POST, tokenInfo, BpmResponse.class, null,null);
+            return service;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+
     public boolean invokeAction(BPMTask bpmTask){
         String serviceUrl = "invoke";
         BpmResponse service = null;

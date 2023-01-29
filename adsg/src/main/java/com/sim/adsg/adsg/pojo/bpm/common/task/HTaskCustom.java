@@ -5,8 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 @Data
 @AllArgsConstructor
@@ -47,4 +46,7 @@ public class HTaskCustom implements Serializable {
     private String reviewedUsers;
     private String descriptionAr;
     private String descriptionEn;
+    private List<String> activeActions;
+
+
 }
