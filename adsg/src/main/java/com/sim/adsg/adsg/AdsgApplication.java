@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.prefs.BackingStoreException;
@@ -29,5 +30,6 @@ public class AdsgApplication {
 		return bpmConsumers.queryTasks(new TokenInfo("weblogic","45d23a02-fd0f-49e4-aab4-8e9500c35daa;;G;;ZGP8TsoDt/cMvtFKflRs9Dn9RPTZonDxxIq+AIBnn0vIUFX3Cf6HT93C2ueuSdBG3uPpjOgkL0SV7u9661h3W9fwf/OlmHo1a24Nr4FOPS/l8OZbsLIPyCi4t7DdlZHUPToB3LuhCacTlThZpfJSdA=="));
 		//return "Hello Adsg App";
 	}
+
 
 }
