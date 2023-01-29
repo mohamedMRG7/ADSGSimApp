@@ -1,0 +1,1 @@
+Add this folder in build path (dist)
