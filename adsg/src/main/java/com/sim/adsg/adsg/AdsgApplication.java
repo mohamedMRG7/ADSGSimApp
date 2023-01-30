@@ -22,13 +22,10 @@ public class AdsgApplication {
 		SpringApplication.run(AdsgApplication.class, args);
 	}
 
-	@Autowired
-	private BPMConsumers bpmConsumers;
 
 	@GetMapping("/")
-	public BpmResponse test() throws Exception {
-		return bpmConsumers.queryTasks(new TokenInfo("weblogic","45d23a02-fd0f-49e4-aab4-8e9500c35daa;;G;;ZGP8TsoDt/cMvtFKflRs9Dn9RPTZonDxxIq+AIBnn0vIUFX3Cf6HT93C2ueuSdBG3uPpjOgkL0SV7u9661h3W9fwf/OlmHo1a24Nr4FOPS/l8OZbsLIPyCi4t7DdlZHUPToB3LuhCacTlThZpfJSdA=="));
-		//return "Hello Adsg App";
+	public String welcomePage(){
+		return "ADSG Spring Application";
 	}
 
 
