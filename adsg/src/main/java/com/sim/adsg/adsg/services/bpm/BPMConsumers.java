@@ -31,7 +31,6 @@ public class BPMConsumers {
         try {
             service = (BpmResponse) restCaller.callRestService(BASE_URL + serviceUrl, HttpMethod.GET, "", BpmResponse.class, authData,null);
             TokenInfo token = service.getToken();
-            System.err.println("inside service");
             return token.getToken();
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,5 +62,21 @@ public class BPMConsumers {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
+    }
+
+    public String authenticateOnBehalf(String username ){
+        Map<String,String> authData = new HashMap<>();
+        authData.put("username", username);
+        String serviceUrl = "authenticateOnBehalf?username={username}";
+        BpmResponse service = null;
+        try {
+            service = (BpmResponse) restCaller.callRestService(BASE_URL + serviceUrl, HttpMethod.GET, "", BpmResponse.class, authData,null);
+            TokenInfo token = service.getToken();
+            return token.getToken();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
     }
 }
