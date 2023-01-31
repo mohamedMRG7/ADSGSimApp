@@ -30,8 +30,8 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("Noc Mobile Integration - NOC",
-                "A REST Mobile service for Noc",
+        return new ApiInfo("ADSG Integration - ADSG",
+                "A Spring service for ADSG",
                 "1.0.0",
                 "Terms of service",
                 new Contact("egabi solution","www.egabi.com","support@egabi.com"),
