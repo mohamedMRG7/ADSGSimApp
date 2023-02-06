@@ -26,7 +26,7 @@ public class BpmController {
         return bpmConsumers.authenticateOnBehalf(username);
     }
 
-    @GetMapping("/list")
+    @PostMapping("/list")
     public BpmResponse queryTasks(@RequestBody TokenInfo tokenInfo){
         return bpmConsumers.queryTasks(tokenInfo);
     }
