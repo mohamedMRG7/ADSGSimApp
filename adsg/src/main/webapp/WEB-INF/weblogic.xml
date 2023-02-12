@@ -1,5 +1,5 @@
 <weblogic-web-app>
-    <context-root>/</context-root>
+    <context-root>/adsg-spring</context-root>
     <container-descriptor>
         <prefer-application-packages>
             <package-name>org.slf4j.*</package-name>
