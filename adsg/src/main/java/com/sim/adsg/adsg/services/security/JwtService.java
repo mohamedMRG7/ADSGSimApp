@@ -81,7 +81,7 @@ public class JwtService {
     return true;
   }
 
-  public boolean isTokenValid(String token) {
+  private boolean isTokenValid(String token) {
     return validateTokenSignature(token) && !isTokenExpired(token);
   }
 
@@ -99,17 +99,17 @@ public class JwtService {
   }
   public static void main(String[] args) {
     JwtService jwtService = new JwtService();
-//    Map<String, Object> extraClaims = new HashMap<>();
-//    extraClaims.put("username","mohamed.atef");
-//    extraClaims.put("role","ADMIN");
-//    extraClaims.put("ID",13909);
-//
-//    System.err.println(jwtService.generateToken(extraClaims));
-//
-    //String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJJRCI6MTM5MDksInVzZXJuYW1lIjoibW9oYW1lZC5hdGVmIiwic3ViIjoibW9oYW1lZC5hdGVmIiwiaWF0IjoxNjc2MjcyNDM5LCJleHAiOjE2NzYyNzM4Nzl9.kvUg0ODJ29czxFx8coz7Zqflw00pxTVwz-1OJdPsPW8";
-    String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1JFQVRPUiIsIklEIjoxMzkwOSwidXNlcm5hbWUiOiJtb2hhbWVkLmF0ZWYiLCJzdWIiOiJtb2hhbWVkLmF0ZWYiLCJpYXQiOjE2NzYyNzI0MzksImV4cCI6MTY3NjI3Mzg3OX0.tVyWh2Mbz8Jx5-tHmHbHVxMhwFAX55xu-uTO3bFH2J0";
-    boolean tokenValid = jwtService.isTokenValid(token);
-    System.out.println("tokenValid = " + tokenValid);
+    Map<String, Object> extraClaims = new HashMap<>();
+    extraClaims.put("username","USER1660469318599");
+    extraClaims.put("role","ADMIN");
+    extraClaims.put("ID",13909);
+
+    System.err.println(jwtService.generateToken(extraClaims));
+
+//    //String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJJRCI6MTM5MDksInVzZXJuYW1lIjoibW9oYW1lZC5hdGVmIiwic3ViIjoibW9oYW1lZC5hdGVmIiwiaWF0IjoxNjc2MjcyNDM5LCJleHAiOjE2NzYyNzM4Nzl9.kvUg0ODJ29czxFx8coz7Zqflw00pxTVwz-1OJdPsPW8";
+//    String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQ1JFQVRPUiIsIklEIjoxMzkwOSwidXNlcm5hbWUiOiJtb2hhbWVkLmF0ZWYiLCJzdWIiOiJtb2hhbWVkLmF0ZWYiLCJpYXQiOjE2NzYyNzI0MzksImV4cCI6MTY3NjI3Mzg3OX0.tVyWh2Mbz8Jx5-tHmHbHVxMhwFAX55xu-uTO3bFH2J0";
+//    boolean tokenValid = jwtService.isTokenValid(token);
+//    System.out.println("tokenValid = " + tokenValid);
   }
 
 
