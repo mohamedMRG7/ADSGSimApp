@@ -8,8 +8,11 @@ public class BaseException extends RuntimeException{
 
     private HttpStatus httpStatus;
 
+    private String message;
+
     public BaseException (String message , HttpStatus httpStatus){
         super(message);
+        this.message = message;
         this.httpStatus = httpStatus;
     }
 }

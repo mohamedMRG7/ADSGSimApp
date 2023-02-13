@@ -1,4 +1,4 @@
-package com.sim.adsg.adsg.controller;
+package com.sim.adsg.adsg.controller.bpm;
 
 import com.sim.adsg.adsg.pojo.bpm.common.BpmResponse;
 import com.sim.adsg.adsg.pojo.bpm.common.TokenInfo;

@@ -31,6 +31,7 @@ public class SecurityConfiguration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
+//                .antMatchers("/helloadmin").hasRole("ADMIN")
                 // To enable authentication change /api/bpm/** -> /api/bpm/login
                 .antMatchers("/api/auth/**","/api/bpm/**")
                 .permitAll()
